@@ -13,7 +13,12 @@ public class Search {
         try {
             var pattern = args[1];
             var file = args[2];
-            searchPattern(pattern, file);
+
+            if (args[0].toLowerCase().equals("search")) 
+                searchPattern(pattern, file);
+            else
+                System.out.println("Invalid command");
+
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
