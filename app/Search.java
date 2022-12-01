@@ -43,7 +43,11 @@ public class Search {
             String data = myReader.nextLine();
 
             int index = data.toLowerCase().indexOf(pattern.toLowerCase());
-            String check = index != -1 ? data.substring(index).split(" ")[0] : "";
+            //String check = index != -1 ? data.substring(index).split(" ")[0] : "";
+            String check = "";
+            if (index != -1) {
+                check = data.substring(index).split(" ")[0];
+            }
             //Regex so that sentences with either of these are still valid patterns.
             check = check.replaceAll("[.,;:?!]", "");
 
