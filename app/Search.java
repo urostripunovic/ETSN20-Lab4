@@ -11,10 +11,11 @@ public class Search {
 
     void run(String[] args) {
         try {
+            var command = args[0];
             var pattern = args[1];
             var file = args[2];
 
-            if (args[0].toLowerCase().equals("search")) 
+            if (command.toLowerCase().equals("search")) 
                 searchPattern(pattern, file);
             else
                 System.out.println("Invalid command");
